@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>rainbow</title>
+      <meta charset="utf-8" />
+      <meta name="description" content="Rainbow Super Chat pricing.">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">      
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="https://apis.google.com/js/api.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="https://mdkj.dev/rainbow/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mdkj.dev/rainbow/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mdkj.dev/rainbow/favicon-16x16.png">
+<link rel="manifest" href="https://mdkj.dev/rainbow/site.webmanifest">
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#d00000">
+<script src="anime.min.js"></script>
+  <script>
+      function execute(){
+        var curr = document.getElementById('currSelect').value;
+        switch (curr) {
+          case "USD":
+            currency = "$"
+            blue = currency + "1.00";
+            cyan = currency + "2.00";
+            green = currency + "5.00";
+            yellow = currency + "10.00";
+            orange = currency + "20.00";
+            magenta = currency + "50.00";
+            red = currency + "100.00";
+            total = currency + "188.00";
+            break;
+          case "CAD":
+            currency = "$"
+            blue = currency + "1.10";
+            cyan = currency + "2.20";
+            green = currency + "5.50";
+            yellow = currency + "11.00";
+            orange = currency + "22.00";
+            magenta = currency + "55.00";
+            red = currency + "110.00";
+            total = currency + "206.80";
+            break;
+          case "CHF":
+            currency = "CHF"
+            blue = currency + "1.00";
+            cyan = currency + "2.00";
+            green = currency + "5.00";
+            yellow = currency + "10.00";
+            orange = currency + "20.00";
+            magenta = currency + "50.00";
+            red = currency + "100.00";
+            total = currency + "188.00";
+            break;
+          case "EUR":
+            currency = "€"
+            blue = currency + "1.00";
+            cyan = currency + "2.00";
+            green = currency + "6.00";
+            yellow = currency + "11.00";
+            orange = currency + "22.00";
+            magenta = currency + "55.00";
+            red = currency + "110.00";
+            total = currency + "207.00";
+            break;
+          case "GBP":
+            currency = "£"
+            blue = currency + "1.00";
+            cyan = currency + "2.00";
+            green = currency + "5.00";
+            yellow = currency + "10.00";
+            orange = currency + "20.00";
+            magenta = currency + "50.00";
+            red = currency + "100.00";
+            total = currency + "188.00";
+            break;
+          case "HKD":
+            currency = "$"
+            blue = currency + "5.00";
+            cyan = currency + "10.00";
+            green = currency + "25.00";
+            yellow = currency + "50.00";
+            orange = currency + "100.00";
+            magenta = currency + "250.00";
+            red = currency + "500.00";
+            total = currency + "940.00";
+            break;
+          case "JPY":
+            currency = "¥"
+            blue = currency + "100";
+            cyan = currency + "200";
+            green = currency + "500";
+            yellow = currency + "1,000";
+            orange = currency + "2,000";
+            magenta = currency + "5,000";
+            red = currency + "10,000";
+            total = currency + "18,800";
+            break;
+          case "PHP":
+            currency = "₱"
+            blue = currency + "27.50";
+            cyan = currency + "55.00";
+            green = currency + "137.50";
+            yellow = currency + "275.00";
+            orange = currency + "550.00";
+            magenta = currency + "1375.00";
+            red = currency + "2750.00";
+            total = currency + "5,170.00";
+            break;
+          case "RON":
+            currency = "RON"
+            blue = currency + "5.00";
+            cyan = currency + "10.00";
+            green = currency + "25.00";
+            yellow = currency + "50.00";
+            orange = currency + "100.00";
+            magenta = currency + "250.00";
+            red = currency + "500.00";
+            total = currency + "940.00";
+            break;
+          case "NOK":
+            currency = "kr"
+            blue = currency + "10.00";
+            cyan = currency + "20.00";
+            green = currency + "50.00";
+            yellow = currency + "100.00";
+            orange = currency + "200.00";
+            magenta = currency + "500.00";
+            red = currency + "1000.00";
+            total = currency + "1,880.00";
+            break;
+        }
+        document.getElementById('sc-blue-price').innerHTML = blue;
+        document.getElementById('sc-cyan-price').innerHTML = cyan;
+        document.getElementById('sc-green-price').innerHTML = green;
+        document.getElementById('sc-yellow-price').innerHTML = yellow;
+        document.getElementById('sc-orange-price').innerHTML = orange;
+        document.getElementById('sc-magenta-price').innerHTML = magenta;
+        document.getElementById('sc-red-price').innerHTML = red;
+        document.getElementById('sc-total-price').innerHTML = total;
+        anime({
+          targets: '.sc-card,#sc-total',
+          translateY: 70,
+          opacity: '0',
+          direction: 'reverse',
+          easing: 'easeInOutExpo',
+          duration: 600,
+          delay: anime.stagger(100, {direction: 'reverse'})
+        });
+        //var oldFS = parseFloat(document.getElementById('oldFS').value);
+        //var oldBORD = parseFloat(document.getElementById('oldBORD').value);
+        //var newFS = parseFloat(document.getElementById('newFS').value);
+        //var result = Math.round(parseFloat( oldBORD * ( newFS / oldFS ) ) * 10) / 10;
+        //document.getElementById('result').value = result;
+        //var sens = parseFloat(document.getElementById('sens').value);
+        
+        //var fullW = parseFloat(document.getElementById('fullW').value);
+        //var fullH = parseFloat(document.getElementById('fullH').value);
+        //var newW = Math.round(parseFloat( fullW / sens ) * 1000 ) / 1000;
+        //var newH = Math.round(parseFloat( fullH / sens ) * 1000 ) / 1000;
+        //document.getElementById('newW').value = newW;
+        //document.getElementById('newH').value = newH;
+      }
+      function execute2(){
+        var newW = parseFloat(document.getElementById('newW').value);
+        var newH = parseFloat(document.getElementById('newH').value);
+      }
+      function copy1(){
+      document.querySelector("#newW").select();
+      document.execCommand('copy');
+    }
+    function copy2(){
+      document.querySelector("#newH").select();
+      document.execCommand('copy');
+    }
+  </script>
+  <style>
+    .sc-card{
+        margin: 10px 20px;
+        border-radius: 4px;
+        overflow: hidden;
+        line-height: normal;
+      }
+      .sc-header{
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+      }
+      .sc-content{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        padding: 8px 16px;
+      }
+      .sc-header.blue{
+        background-color: #1565c0;
+      }
+      .sc-header.cyan{
+        background-color: #00b8d4;
+      }
+      .sc-content.cyan{
+        background-color: #00e5ff;
+      }
+      .sc-header.green{
+        background-color: #00bfa5;
+      }
+      .sc-content.green{
+        background-color: #1de9b6;
+      }
+      .sc-header.yellow{
+        background-color: #ffb300;
+      }
+      .sc-content.yellow{
+        background-color: #ffca28;
+      }
+      .sc-header.orange{
+        background-color: #e65100;
+      }
+      .sc-content.orange{
+        background-color: #f57c00;
+      }
+      .sc-header.magenta{
+        background-color: #c2185b;
+      }
+      .sc-content.magenta{
+        background-color: #e91e63;
+      }
+      .sc-header.red{
+        background-color: #d00000;
+      }
+      .sc-content.red{
+        background-color: #e62117;
+      }
+      .sc-img{
+        margin-right: 16px;
+      }
+      .sc-headerauthor{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .sc-text-semidark{
+        color: rgba(0,0,0,0.54);
+      }
+      .sc-text-darkish{
+        color: rgba(0,0,0,0.7);
+      }
+      .sc-text-dark{
+        color: black;
+      }
+      .sc-text-semilight{
+        color: rgba(255,255,255,0.7)
+      }
+      .sc-text-light{
+        color: white;
+      }
+      .sc-headeramount{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+      }
+    @media screen and (min-width: 601px) {
+      .main-div{
+        width: 500px;
+        margin: 20px auto;
+      }
+      .btn {
+      font-size: 1rem;
+      display: inline-block;
+      }
+      .logo {
+        padding: 3rem;
+      }
+      .logo-img{
+        width: 40%;
+      }
+      .input-box{
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .main-div{
+        width: 100%;
+        padding: 1rem;
+      }
+      .btn {
+      font-size: 1rem;
+      width: 100%;
+      }
+      .form-control{
+        font-size: 1rem;
+        width: 6rem;
+        display: inline-block;
+      }
+      .logo {
+        padding: 2rem;
+      }
+      .logo-img{
+        width: 60%;
+      }
+      .input-box{
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+    .main-text{
+        text-align: center;
+    }
+  </style>
+</head>
+<body onload="execute()">
+  <div class="main-div">
+    <div class="main-text">
+        <h1>
+          <img src="rainbow.png" width="40rem" style="padding-bottom: 0.5rem;"/> rainbow
+        </h1>
+        <p>Rainbow Super Chat pricing.</p>
+    </div>
+    <div class="input-box border">
+      <form>
+      <div class="form-group">
+        <label for="currSelect">Select currency</label>
+        <select class="form-select" id="currSelect" onchange="execute()">
+          <option value="USD">USD - US Dollar</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CHF">CHF - Swiss Franc</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="HKD">HKD - Hong Kong Dollar</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="PHP">PHP - Philippine Pesos</option>
+          <option value="RON">RON - Romanian Leu</option>
+          <option value="NOK">NOK - Norwegian Krone</option>
+        </select>
+      </div>
+    </form>
+    </div>
+    <div class="sc-card blue">
+      <div class="sc-header blue">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-semilight">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-light">
+              <span id="sc-blue-price"></span>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="sc-card cyan">
+      <div class="sc-header cyan">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-darkish">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-dark">
+              <span id="sc-cyan-price"></span>
+            </div>
+          </div>
+      </div>
+      <div class="sc-content cyan sc-text-dark">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="sc-card green">
+      <div class="sc-header green">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-semidark">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-dark">
+              <span id="sc-green-price"></span>
+            </div>
+          </div>
+      </div>
+      <div class="sc-content green sc-text-dark">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="sc-card yellow">
+      <div class="sc-header yellow">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-semidark">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-dark">
+              <span id="sc-yellow-price"></span>
+            </div>
+          </div>
+      </div>
+      <div class="sc-content yellow sc-text-dark">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="sc-card orange">
+      <div class="sc-header orange">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-semilight">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-light">
+              <span id="sc-orange-price"></span>
+            </div>
+          </div>
+      </div>
+      <div class="sc-content orange sc-text-light">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="sc-card magenta">
+      <div class="sc-header magenta">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-semilight">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-light">
+              <span id="sc-magenta-price"></span>
+            </div>
+          </div>
+      </div>
+      <div class="sc-content magenta sc-text-light">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="sc-card red">
+      <div class="sc-header red">
+          <div class="sc-img">
+          <img src="rainbow.png" width="40px" style="border-radius: 40px;"/>
+          </div>
+          <div class="sc-headercontent">
+            <div class="sc-headerauthor sc-text-semilight">
+              <span>rainbow</span>
+            </div>
+            <div class="sc-headeramount sc-text-light">
+              <span id="sc-red-price"></span>
+            </div>
+          </div>
+      </div>
+      <div class="sc-content red sc-text-light">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="input-box border" id="sc-total">
+      <center>
+      Total: <span id="sc-total-price" style="font-weight: bold;"></span>
+    </center>
+    </div>
+    
+  </div>
+  <div style="bottom: 15px;text-align: center;width: 100%;padding: 1rem;">
+    This does not account for price increases caused by the iOS App Store.
+    <br />
+    <script>
+      document.write("Last updated" + " " +document.lastModified);
+   </script>
+   <br />
+    Built by <a href="https://mdkj.dev/">Madekuji-san</a>.
+  </div>
+</body>
+</html>
